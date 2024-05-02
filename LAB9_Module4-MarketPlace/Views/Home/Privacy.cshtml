@@ -126,8 +126,10 @@ li
     <!-- header -->
     <header>
         <a style="display: flex;">
-            <img style="left: 1px; margin-left: 30px; width: 5%; height: 5%;" src="~/images/logoMainTitle.png" alt="logoTitle">
-            <p style="left: 1px; margin-left: 30px; font-size: 32px; font-weight: bold; font-family: 'Lucida Sans Unicode';">My MarketPlace</p>
+            <a href="@Url.Action("Index", "Home")">
+                <img style="left: 1px; margin-left: 30px; width: 5%; height: 5%;" src="~/images/logoMainTitle.png" alt="logoTitle">
+            </a>
+            <p style="position: absolute; top: 1px; left: 135px; margin-left: 30px; font-size: 32px; font-weight: bold; font-family: 'Lucida Sans Unicode';">My MarketPlace</p>
         </a>
         <button class="catalogBtnHeader">Каталог</button>
         <input class="searchInputHeader" type="text">
