@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - My MarketPlace</title>
+    <title>Registration - My MarketPlace</title>
 </head>
 <style>
 body 
@@ -185,6 +185,17 @@ section
     padding: 0 35px 0 5px;
     color: #fff;
 }
+.inputbox11 input
+{
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: 0 35px 0 5px;
+    color: #fff;
+}
 .inputbox ion-icon
 {
     position: absolute;
@@ -213,6 +224,24 @@ h1
     margin: 30px 0;
     max-width: 310px;
     border-bottom: 2px solid #fff;
+}
+.inputbox11
+{
+    position: relative;
+    margin: 30px 0;
+    max-width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox11 label
+{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
 }
 .inputbox label
 {
@@ -334,7 +363,7 @@ footer
     <!-- Main Info -->
     <section>
         <form>
-            <h1>Вхід</h1>
+            <h1>Реєстрація</h1>
             <div class="inputbox">
                 <ion-icon name="mail-outline"></ion-icon>
                 <input type="email" required>
@@ -345,13 +374,14 @@ footer
                 <input type="password" required>
                 <label for="">Пароль</label>
             </div>
-            <div class="forget">
-                <label for=""><input type="checkbox">Запам'ятати</label>
-                <a href="#">Забули пароль?</a>
+            <div class="inputbox11">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" required>
+                <label for="">Повторіть пароль</label>
             </div>
-            <button>Увійти</button>
+            <button>Зареєструватися</button>
             <div class="register">
-                <p>Вперше тут? <a href="@Url.Action("RegisterUser", "Home")">Зареєструватися</a></p>
+                <p>Вже є аккаунт? <a href="@Url.Action("UserEnter", "Home")">Увійти</a></p>
             </div>
         </form>
     </section>
